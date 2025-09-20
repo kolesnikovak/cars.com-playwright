@@ -11,6 +11,8 @@ export class HomePage {
     distanceFilterSelect : Locator
     zipCodeFilter : Locator
     showResultsButton : Locator
+    yourGarageText : Locator
+
     
 
     constructor(page: Page) {
@@ -23,6 +25,7 @@ export class HomePage {
         this.distanceFilterSelect = page.locator('select[name="maximum_distance"]')
         this.zipCodeFilter = page.locator('input[name="zip"]')
         this.showResultsButton = page.locator('spark-fieldset[variant="melded"] spark-button')
+        this.yourGarageText = page.getByRole('heading', { name: 'Your Garage' })
 
 
     }
@@ -49,6 +52,10 @@ export class HomePage {
         await this.distanceFilterSelect.selectOption(distance)
         await this.zipCodeFilter.fill(zipCode)
         await this.showResultsButton.click()
+    }
+
+    async validateTitleText(expectedTitleMessage: string): Promise<void> {
+     
     }
 
 }

@@ -17,7 +17,7 @@ export default defineConfig({
     baseURL: 'http://localhost:3000',
     trace: 'on-first-retry',
     screenshot: 'on',
-    video: 'retain-on-failure',
+    video: 'off',
   },
   projects: [
     {
