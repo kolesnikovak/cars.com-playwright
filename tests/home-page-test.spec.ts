@@ -11,7 +11,6 @@ test("Home Page functions validation", async ({page}) => {
     await homePage.searchBarValidation("Porsche")
     await homePage.validateOrSearchByTitle("- Or search by -")
     await homePage.seachByFilter("bmw", "bmw-m4", "30", "60125")
-    await page.waitForTimeout(5_000)
     
     let searchPage = new SearchPage(page)
     await searchPage.validateTags(["BMW", "M4"])

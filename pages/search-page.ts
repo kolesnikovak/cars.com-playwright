@@ -1,5 +1,4 @@
 import { expect, Locator, Page } from '@playwright/test'
-import { isAwaitExpression } from 'typescript'
 
 export class SearchPage {
     tags : Locator
