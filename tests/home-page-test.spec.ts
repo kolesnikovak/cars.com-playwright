@@ -8,5 +8,6 @@ test("Home Page functions validation", async ({page}) => {
     await homePage.validateTitleMessage("Imagine the possibilities")
     await homePage.clickMenuButton()
     await homePage.searchBarValidation("Porsche")
+    await homePage.validateOrSearchByTitle("- Or search by -")
 
 })
